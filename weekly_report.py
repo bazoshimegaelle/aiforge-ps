@@ -2,6 +2,7 @@ import os
 from datetime import date, datetime
 from dotenv import load_dotenv
 from agents import Agent, Runner
+from citation_utils import process_report
 
 # ---------------------------------------------------
 # Load environment variables
@@ -186,12 +187,14 @@ Weekly report format:
         print(f"Error: {error}")
         return
 
+    processed_report = process_report(result.final_output)
+
     os.makedirs("weekly_reports", exist_ok=True)
 
     filename = f"weekly_reports/{report_date}_weekly_report.md"
 
     with open(filename, "w", encoding="utf-8") as file:
-        file.write(result.final_output)
+        file.write(processed_report)
 
     print(f"Weekly report saved to: {filename}")
 
