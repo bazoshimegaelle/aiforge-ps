@@ -135,47 +135,81 @@ The current version can:
 
 ---
 
+
 # Installation
 
-Clone the repository:
+## Clone the repository
 
 ```bash
 git clone https://github.com/bazoshimegaelle/aiforge-ps.git
+cd aiforge-ps
 ```
 
-Create a virtual environment:
-
-```bash
-python -m venv .venv
-```
-
-Activate it:
+## Create a virtual environment
 
 Windows
 
 ```bash
+python -m venv .venv
 .venv\Scripts\activate
 ```
 
-Install dependencies:
+Linux/macOS
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+## Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Configure your API key:
+## Configure your API key
 
-```text
-OPENAI_API_KEY=your_api_key
+Copy the example environment file.
+
+Windows
+
+```bash
+copy .env.example .env
 ```
 
-Run the application:
+Linux/macOS
+
+```bash
+cp .env.example .env
+```
+
+Open `.env` and replace:
+
+```text
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+with your own API key.
+
+## Run the application
+
+Interactive research:
 
 ```bash
 python main.py
 ```
 
----
+Daily intelligence report:
+
+```bash
+python daily_research.py
+```
+
+Weekly executive report:
+
+```bash
+python weekly_report.py
+```
 
 # Research Focus
 
