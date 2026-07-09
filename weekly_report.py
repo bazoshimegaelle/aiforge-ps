@@ -33,14 +33,25 @@ Audience:
 - governance and risk teams
 - digital forensics and incident response teams
 
-Reporting rules:
+APA citation and source rules:
 
 - Be clear, concise, and executive-friendly.
 - Identify patterns across the daily updates instead of simply repeating them.
 - Highlight the most important AI cybersecurity risks for public-sector organizations.
-- Tie important findings to specific sources already included in the daily updates when available.
-- Preserve clickable Markdown links from the daily reports.
-- Do not list vague sources such as "CISA" or "NIST" without a link if a link is available.
+- In the body of the report, do not hyperlink phrases or sentences.
+- In the body of the report, cite sources only with APA-style in-text citations, such as (CISA, 2026) or (Microsoft, 2025).
+- Put clickable URLs only in the References section.
+- Format the References section in APA-style as much as possible.
+- Each reference must include organization/author, year or full date if available, title, publisher if different from author, and URL.
+- Do not list vague references such as "CISA" or "NIST" without a full citation and URL.
+- When daily reports already contain references, preserve their URLs but normalize the references into APA style.
+- Remove duplicate references when possible.
+
+Reference format examples:
+
+Cybersecurity and Infrastructure Security Agency. (2026). Title of report or webpage. https://www.cisa.gov/example
+National Institute of Standards and Technology. (2025). Title of report or webpage. https://www.nist.gov/example
+Microsoft. (2025). Title of report or webpage. https://www.microsoft.com/example
 
 Safety rules:
 
@@ -59,7 +70,7 @@ Report format:
 
 3. Top AI Cyber Threats This Week
    - Explain why each threat matters.
-   - Mention supporting sources when available.
+   - Include APA-style in-text citations.
 
 4. Public-Sector Impact
 
@@ -75,9 +86,9 @@ Report format:
 7. Defensive Recommendations
 
 8. References
-   - Preserve clickable Markdown links from the source daily reports.
-   - Use this format when adding or normalizing sources:
-     - [Organization – Title](https://example.com) — Publication date if available.
+   - APA-style references with URLs only here.
+   - Sort references alphabetically when possible.
+   - Remove duplicates when possible.
 """,
 )
 
@@ -128,9 +139,13 @@ Daily updates:
 Requirements:
 
 - Summarize weekly patterns instead of only repeating each daily update.
-- Preserve clickable Markdown links from the daily reports.
-- Include source-backed findings whenever possible.
-- Do not provide vague source names without URLs if URLs are available.
+- Use APA-style in-text citations in the body, such as (CISA, 2026).
+- Do not hyperlink phrases or sentences in the body of the report.
+- Put URLs only in the References section.
+- Format the References section using APA-style citations with URLs.
+- Preserve source URLs from the daily reports when available.
+- Remove duplicate references when possible.
+- Sort references alphabetically when possible.
 - Keep recommendations defensive, practical, and human-supervised.
 - Do not include offensive cyber instructions.
 
@@ -159,9 +174,9 @@ Weekly report format:
 7. Defensive Recommendations
 
 8. References
-   - Preserve clickable Markdown links from the daily reports.
-   - Format every source as a clickable Markdown link when possible.
-   - Example: [CISA – AI Security Guidance](https://www.cisa.gov/) — Publication date if available.
+   - Use APA-style references.
+   - Include URLs only in this section.
+   - Example: Cybersecurity and Infrastructure Security Agency. (2026). Title of report. https://www.cisa.gov/example
 """
 
     try:
