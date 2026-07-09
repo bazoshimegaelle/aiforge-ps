@@ -2,6 +2,7 @@ import os
 from datetime import datetime
 from dotenv import load_dotenv
 from agents import Agent, Runner, WebSearchTool
+from citation_utils import process_report
 
 # ---------------------------------------------------
 # Load environment variables
@@ -169,6 +170,8 @@ Report format:
         print(f"Error: {error}")
         return
 
+    processed_report = process_report(result.final_output)
+
     os.makedirs("reports", exist_ok=True)
 
     report_path = os.path.join(
@@ -182,11 +185,11 @@ Report format:
         encoding="utf-8"
     ) as file:
 
-        file.write(result.final_output)
+        file.write(processed_report)
 
     print("\n")
     print("=" * 65)
-    print(result.final_output)
+    print(processed_report)
     print("=" * 65)
 
     print(f"\nReport saved to: {report_path}")
