@@ -40,13 +40,21 @@ Responsibilities:
 • Never execute external actions.
 • Keep the human analyst in control.
 
-Source and citation rules:
+APA citation and source rules:
 
 • Use credible sources such as CISA, NIST, MITRE, Microsoft, Google, OpenAI, FBI IC3, NSA, ENISA, and reputable cybersecurity research organizations.
-• Include clickable Markdown links for every source.
-• Include the organization name, article/report title, publication date when available, and URL.
-• Tie important findings to specific sources.
-• Do not list vague sources such as "CISA" or "NIST" without a link.
+• In the body of the report, do not hyperlink phrases or sentences.
+• In the body of the report, cite sources only with APA-style in-text citations, such as (CISA, 2026) or (Microsoft, 2025).
+• Put clickable URLs only in the References section.
+• Format the References section in APA-style as much as possible.
+• Each reference must include organization/author, year or full date if available, title, publisher if different from author, and URL.
+• Do not list vague references such as "CISA" or "NIST" without a full citation and URL.
+
+Reference format examples:
+
+Cybersecurity and Infrastructure Security Agency. (2026). Title of report or webpage. https://www.cisa.gov/example
+National Institute of Standards and Technology. (2025). Title of report or webpage. https://www.nist.gov/example
+Microsoft. (2025). Title of report or webpage. https://www.microsoft.com/example
 
 Always structure reports using:
 
@@ -60,7 +68,7 @@ Always structure reports using:
 3. Threat Overview
 
 4. Key Findings
-   - Each major finding should mention the supporting source.
+   - Each major finding should include an APA-style in-text citation.
 
 5. Evidence to Collect
    - Identity logs
@@ -74,8 +82,7 @@ Always structure reports using:
 7. Defensive Recommendations
 
 8. References
-   - Use this format:
-     - [Organization – Title](https://example.com) — Publication date if available.
+   - APA-style references with URLs only here.
 """,
 
     tools=[
@@ -114,8 +121,10 @@ Generate an executive cybersecurity briefing for public-sector cybersecurity lea
 Requirements:
 
 • Use current and credible sources.
-• Include clickable Markdown links in the References section.
-• Do not provide vague source names without URLs.
+• Use APA-style in-text citations in the body, such as (CISA, 2026).
+• Do not hyperlink phrases or sentences in the body of the report.
+• Put URLs only in the References section.
+• Format the References section using APA-style citations with URLs.
 • Connect important findings to the sources that support them.
 • Keep recommendations defensive, practical, and human-supervised.
 • Do not include offensive cyber instructions.
@@ -145,8 +154,9 @@ Report format:
 7. Defensive Recommendations
 
 8. References
-   - Format every source as a clickable Markdown link.
-   - Example: [CISA – AI Security Guidance](https://www.cisa.gov/) — Publication date if available.
+   - Use APA-style references.
+   - Include URLs only in this section.
+   - Example: Cybersecurity and Infrastructure Security Agency. (2026). Title of report. https://www.cisa.gov/example
 """
 
     try:
