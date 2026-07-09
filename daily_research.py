@@ -2,6 +2,7 @@ import os
 from datetime import date, datetime
 from dotenv import load_dotenv
 from agents import Agent, Runner, WebSearchTool
+from citation_utils import process_report
 
 # ---------------------------------------------------
 # Load environment variables
@@ -148,12 +149,14 @@ Format:
         print(f"Error: {error}")
         return
 
+    processed_report = process_report(result.final_output)
+
     os.makedirs("daily_updates", exist_ok=True)
 
     filename = f"daily_updates/{report_date}_daily_update.md"
 
     with open(filename, "w", encoding="utf-8") as file:
-        file.write(result.final_output)
+        file.write(processed_report)
 
     print(f"Daily update saved to: {filename}")
 
